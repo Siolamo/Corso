@@ -114,6 +114,10 @@ int main()
     */
 
     int pin = "4567";
+    if(pin=="4567")
+    {
+        printf("accesso consentito");
+    }
 
 
 }
