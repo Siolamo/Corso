@@ -106,7 +106,7 @@ così la variabile risultato creata a linea 121 avrà il valore di  'return a+b'
 ! ORA ABBIAMO VISTO 3 MODI PER CHIAMARE UNA FUNZIONE
 ?1) int r  = miafunzione();
 ?2) miafunzione();
-?3) printf("%d", mianfunzione());
+?3) printf("%d", mianfunzione()); //se mia funzione restituisce un intero
 ! BISOGNA RICORDARSI CHE OGNI VOLTA CHE SI CHIAMA UNA FUNZIONE VERRà SEMPRE ESEGUITO
 ! TUTTO IL CODICE AL SUO INTERNO
 ! QUINDI ANCHE SE HO:
