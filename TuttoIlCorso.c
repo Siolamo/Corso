@@ -6,18 +6,18 @@ boh sigle utili da sapere:
 CPU: Central Processing Unit
 GPU: Graphic Processing Unit
 SSD: Solid-State Drive
-GCC: GNU c compiler
+GCC: GNU C Compiler
 GDB: GNU DeBugger
 CSV: Comma Seprated Values
 JS: JavaScript
 !!Java e Javascript sono 2 cose molto diverse tra loro!!
 JSON: JavaScript Object Notation
-C: (linguaggio dei) Coglioni
+C: C
 PC : Personal Computer
 GNU: GNU (is) Not Unix
-BIOS: Boia (qualla madonna d)IO(cane )S(tronzo)
+BIOS: Basic Input Output System
 
-!!Queste qua giù di abbrevviazione potete saltarle
+!!Queste qua giù di abbrevviazioni potete saltarle
 !!Potete andare alla parte di Teoria
 PAT: Port Adress Translation
 NAT: Network Adress Translation
