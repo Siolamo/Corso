@@ -149,7 +149,7 @@ int AltraAltraFunzione(int x,int y, int c)
 /*
 Se io ora provassi a chiamarre o 'AltraFunzione' o 'AltraAltraFunzione' in main non andrebbe,
 perchè bisogna ricordarsi che lo script viene sempre letto dall'alto al basso.
-Quindi se io faccio una chiamata di una funzione che non ho ancora dichiaro non andrà
+Quindi se io faccio una chiamata di una funzione che non ho ancora dichiarato non andrà.
 fra è letteralmente come scrivere:
 
 int main()
