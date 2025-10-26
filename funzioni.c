@@ -133,14 +133,14 @@ int main()
 
 int AltraFunzione()
 {
-    return sommaConParametri(5,3) / 2  //ho fatto una funzione a caso che restituisce la somma di due numeri diviso due
+    return sommaConParametri(5,3) / 2;  //ho fatto una funzione a caso che restituisce la somma di due numeri diviso due
 }
 
 //addirittura volendo posso anche passare i parametri di una funzione come parametri ad un altra funzione:
 
 int AltraAltraFunzione(int x,int y, int c)
 {
-    return sommaConParametri(x,y) / c //nel main io scriverei qualcosa tipo: AltraAltraFunzione(5,8,3)
+    return sommaConParametri(x,y) / c; //nel main io scriverei qualcosa tipo: AltraAltraFunzione(5,8,3)
                                       // e passerebbe come parametri 5 e 8 ad sommaConParametri e poi ne divide il risultato (quello che ritorna sommaConParametri) per il numero c (in questo caso 3)
 }
 
