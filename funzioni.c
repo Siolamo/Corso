@@ -61,7 +61,7 @@ Abbiamo visto nella funziona qua sopra, che possiamo utilizzare delle variabili 
 Ma se noi volessimo fare una funzione che al posto di fare la somma soltanto con a=5 e b=8, ci faccia la somma
 con dei numeri che vogliamo noi?
 
-qui entrano in gioco i Parametri.
+!qui entrano in gioco i Parametri.
 
 i parametri di una funzione sono dei valori che vengono passati "esternamente" alla chiamata della funzione, e vengono specificati(creati) nella funzione alla sua dichiarazione:
 esempio:
