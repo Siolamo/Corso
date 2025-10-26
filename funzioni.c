@@ -19,7 +19,7 @@ vediamo che alla fine della funzione c'è un 'return 0;', 0 è un intero
 se li al posto di int avessi scritto per esempio char, avrei dovuto mettere un return di tipo char, es: retunrn 'c';
 avessi avuto una funzioned che non restituisce niente, avrei messo void
 
-miaFunzione, è il nome della funzione, la posso chiamare come voglio, l'avrei potuta chiamare anche pippo baudo
+miaFunzione, è il nome della funzione, la posso chiamare come voglio, l'avrei potuta chiamare anche gigi
 
 */
 
