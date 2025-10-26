@@ -96,7 +96,7 @@ per poi andarlo a utilizzare in futuro, possiamo farlo!
 dobbiamo prima di tutto guardare cosa restituisce la funzione (in questo caso con SommaConParametri, restituisce un intero (Linea 80)).
 poi dobbiamo creare una variabile dello stesso tipo (in questo caso int);
 e chiamare la funziona nell'assegnazione del valore della variabile (esempio linea 121)
-così la variabile risultato creata a linea 121 verrà sostituita con il valore di 'return a+b' dove a=7, b=12;
+così la variabile risultato creata a linea 121 avrà il valore di  'return a+b' dove a=7, b=12;
 
 */
 
