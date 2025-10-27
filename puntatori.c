@@ -62,10 +62,34 @@ se io avessi voluto sovrascrivere il valore di x, avrei potuto farlo in 2 modi:
 
 1) il metodo che già conoscioamo : x = funzioneComplessa(x); //in questo caso x viene sovrascritta col suo nuovo valore dopo tutti i calcoli di 'funzioneComplessa'
 
-2)avrei dovuto craere una funzione che,in qualche modo, mi va a modificare DIRETTAMETNE il valore di x
+2)avrei dovuto craere una funzione che,in qualche modo, mi va a modificare DIRETTAMETNE il valore di x,
+il che si puo fare con i puntatori; avendo l'indirizzo di memoria di una variabile io ne posso andare a modificare direttamente il valore.
 
+semplicemente invece di passare 'x' alla funzione, ora proveremo a passargli l'indirizzo di memoria di x.
+
+
+prima di tutto la funzione va modificata così
+!NOTARE BENE
+ho reso la funzione sottostante un 'void' in quanto, andando a modificare direttamente il valore di una variabile, non neccessito di alcun return.
 */
 
+void miaFunzione(int* a) //l'* indica che si tratta di un puntatore.
+{
+   //!ATTENZIONE
+   /*
+   ora in questa funzione 'a' è uguale ad un indirizzo di memoria, quindi
+   se eseguo un operazione tipo 'a++' NON STO INCREMENTANDO IL VALORE DI A
+   sto cambiando indirizzo di memoria. 
+   */
+      
+}
+
+
+int main3()
+{
+    int z=5;
+    miaFunzione(z)
+}
 /*Script still in WIP, gimme moments e lo finisco*/
 int main()
 {
