@@ -1,6 +1,15 @@
 #include <stdio.h>
 
 /*
+per una migliore comprensione del testo,
+installare l'estensione "Better Comments" su visual studio.
+(se vedete che inizio i commenti con //? o //!)
+è perchè con quella estensione diventano colorati.
+*/
+
+
+
+/*
 Cos'è una funzione?
 Una funzione non è nient altro che un blocco di codcice eseguibile alla chiamata
 esempio di funzione:
