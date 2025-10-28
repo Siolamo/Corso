@@ -53,7 +53,7 @@ int main2()
 /*
 in questo caso abbiamo una funziuone che fa più operazioni.
 !NOTARE BENE
-il printf in linea 49 ci restiuisce il valore di x dopo che è passato per tutti i 
+il printf in linea 49 ci restiuisce il valore di x dopo che è passato per tutti i
 calcoli di 'funzioneComplessa'
 !MA IL VALORE DI 'X' è RIMASTO INVARIATO (per dimostraverlo ho fatto un printf di 'x' dopo che abbiamo chiamato 'funzioneComplessa')
 questo perchè, nel main ho creato una variabile x, e a sua volta gli è stato allocato il suo spazio in memoria con un indirizzo;
@@ -79,16 +79,35 @@ void miaFunzione(int* a) //l'* indica che si tratta di un puntatore.
    /*
    ora in questa funzione 'a' è uguale ad un indirizzo di memoria, quindi
    se eseguo un operazione tipo 'a++' NON STO INCREMENTANDO IL VALORE DI A
-   sto cambiando indirizzo di memoria. 
+   sto cambiando indirizzo di memoria.
+   Per riferirci al valore di 'a' dobbiamo usare la sintassi '*a'.
+
    */
-      
+
+   //a++ sbagliato, così mi sto riferendo alla zona di memoria di indice 'a'+1 (gli indirizzi d8 memoria sono dei numeri anche loro, possono esswre incrementati anche loro).
+   //! ATTENZIONE, anche scrivere '*a++;' é sbagliato!
+   //L'operatore '++' ha più priorità rispetto a '*', vuol dire che noi stiamo prima incrementando a (che èun indirizzo di memoria),
+   // e poi con '*' stiamo prendendo il valore della zona di memoria con indirizzo 'a++'.
+
+  (*a)++; //questa è la sintassi cotretta per incrementare il valore di a, prima si prende il suo valore
+  //diamo precedenza all'operatore '*' con le parentesi, poi incrementiamo  ('++') il valore;
+  *a = *a/2;
+  *a = *a * 7;
+  //non metto un return perchè come detto prima se vado a modificare direttamente il valore di una variabile non glielo metto.
+ //(commento post aver scritto la riga qua sopra) guyse, ci sono dei casi dove anche se una funzione va modificare direttamente il valore di una variabile si mette il return
+// ovviamente dipende dall'obbietivo della funzione, da cosa deve fare la funzione (più avanti nel codice provo a fare un esempio pratico.
 }
 
 
 int main3()
 {
     int z=5;
-    miaFunzione(z)
+    miaFunzione(z) //!ATTENZIONE! questa chianata è errata!
+    //la funzione 'miaFunzione' richiede come parametro un 'int*', che è un indirizzo per una zona di memoria.
+   // con questa chiamata, non stiamo passando l'indirizzo di memoria della nostra variabile z, ma  stiamo passando il valore 5 come se fosse un indirizzo di memoria!!
+   //(per questo c è un linguaggio pericoloso, perchè se io vado ad eseguire questo programma, tutte le operazioni che vado ad eseguire in "miaFunzione"  (in questo caso) andranno
+  // eseguite su 'qualcosa' che principalmente potrebbe essere un qualsiasi file, con indirizzo di memoria '5'!
+
 }
 /*Script still in WIP, gimme moments e lo finisco*/
 int main()
