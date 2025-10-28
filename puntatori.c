@@ -1,5 +1,16 @@
 #include <stdio.h>
 
+
+/*
+per una migliore comprensione del testo,
+installare l'estensione "Better Comments" su visual studio.
+(se vedete che inizio i commenti con //? o //!
+è perchè con quella estensione diventano colorati)
+*/
+
+
+
+
 /*
 ?Allerta, in questo script ho creato più di un main solo per fare degli esempi, gli ho tutti chiamati mainN (n incrementa)
 ?Ricordarsi che soltanto il 'main' originale è quello che viene eseguito nell'eseguibile
@@ -94,23 +105,33 @@ void miaFunzione(int* a) //l'* indica che si tratta di un puntatore.
   *a = *a/2;
   *a = *a * 7;
   //non metto un return perchè come detto prima se vado a modificare direttamente il valore di una variabile non glielo metto.
- //(commento post aver scritto la riga qua sopra) guyse, ci sono dei casi dove anche se una funzione va modificare direttamente il valore di una variabile si mette il return
-// ovviamente dipende dall'obbietivo della funzione, da cosa deve fare la funzione (più avanti nel codice provo a fare un esempio pratico.
+  //(commento post aver scritto la riga qua sopra) guyse, ci sono dei casi dove anche se una funzione va modificare direttamente il valore di una variabile si mette il return
+  // ovviamente dipende dall'obbietivo della funzione, da cosa deve fare la funzione (più avanti nel codice provo a fare un esempio pratico.
 }
 
 
 int main3()
 {
     int z=5;
-    miaFunzione(z) //!ATTENZIONE! questa chianata è errata!
+    //miaFunzione(z) //!ATTENZIONE! questa chianata è errata! (infatti l'ho commentata)
     //la funzione 'miaFunzione' richiede come parametro un 'int*', che è un indirizzo per una zona di memoria.
-   // con questa chiamata, non stiamo passando l'indirizzo di memoria della nostra variabile z, ma  stiamo passando il valore 5 come se fosse un indirizzo di memoria!!
-   //(per questo c è un linguaggio pericoloso, perchè se io vado ad eseguire questo programma, tutte le operazioni che vado ad eseguire in "miaFunzione"  (in questo caso) andranno
-  // eseguite su 'qualcosa' che principalmente potrebbe essere un qualsiasi file, con indirizzo di memoria '5'!
+    // con questa chiamata, non stiamo passando l'indirizzo di memoria della nostra variabile z, ma  stiamo passando il valore 5 come se fosse un indirizzo di memoria!!
+    //(per questo c è un linguaggio pericoloso, perchè se io vado ad eseguire questo programma, tutte le operazioni che vado ad eseguire in "miaFunzione"  (in questo caso) andranno
+    // eseguite su 'qualcosa' che principalmente potrebbe essere un qualsiasi file, con indirizzo di memoria '5'!
+
+    //per chiamare correttamente la funzione 'miaFunzione' io gli devo passare l'INDIRZZO della mia variabile z.
+    //e per passare l'indirizzo, basta aggiungere una 'e commerciale' (&) prima del nome della variabile nella chiamata:
+    prtinf("\nvalore di z prima della funzione: %d\n", z);
+    miaFunzione(&z); //?Chiamata Corretta!
+    prtinf("\nvalore di z dopo la funzione: %d\n", z);
+    //quindi in questo caso, facendo un printf di z, vedrò che è cambiato il suo valore!
+
+
 
 }
-/*Script still in WIP, gimme moments e lo finisco*/
+
 int main()
 {
     main2();
+    main3()
 }
