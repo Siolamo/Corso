@@ -130,7 +130,8 @@ int main3()
 
 }
 
-int main()
+int main() //qua chiamo tutti i vari main perchè, per comodità ho diviso il programma in più
+           //parti (non avevo sbatti di fare 300 programmi diversi)
 {
     main2();
     main3()
