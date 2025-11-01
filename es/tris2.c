@@ -6,7 +6,6 @@ int main()
     scanf("%d%d%d%d%d%d", &x1,&y1,&x2,&y2,&x3,&y3);
     int yl = y1+y2+y3;
     int xl = x1+x2+x3;
-    // Controllo se i tre punti sono allineati
     // Due segmenti (x1,y1)-(x2,y2) e (x1,y1)-(x3,y3) hanno la stessa pendenza
     // se (y2 - y1)*(x3 - x1) == (y3 - y1)*(x2 - x1)
     if ((y2 - y1) * (x3 - x1) == (y3 - y1) * (x2 - x1))
