@@ -8,7 +8,7 @@ int main()
     int xl = x1+x2+x3;
     if(yl%3==0||xl%3==0||(xl==6&&yl==6))
     {
-        printf("NICE");
+        printf("NICE\n\n");
     }
 
 //stampo la tabella der tris cuz così capisco shit
@@ -16,7 +16,7 @@ int main()
     {
         for(int x=1;x<=3;x++)
         {
-            printf("this is: x%d,y%d",x,y);
+            printf("(x%d,y%d) ",x,y);
         }
         printf("\n");
     }
