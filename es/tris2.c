@@ -14,7 +14,7 @@ int main()
         printf("not so good");
 
 //stampo la tabella der tris cuz così capisco shit
-    for(int y=3;y>=1;y+=aggiunta)
+    for(int y=3;y>=1;y++)
     {
         for(int x=1;x<=3;x++)
         {
