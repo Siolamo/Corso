@@ -5,12 +5,14 @@
 
 
 void stampaLista(Lista l)
-{
+{   
+    printf("[");
     while (l!=NULL)
     {
-        printf("%d", l->dato);
+        printf(" %d ", l->dato);
         l=l->next;
     }
+    printf("]\n");
 }
 
 

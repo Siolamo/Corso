@@ -16,3 +16,4 @@ int rim_elem(Lista* pl, Dato d);
 void nuovaLista(Lista *pl);
 Lista insertionSort(Lista l1);
 Lista insertionSortConEliminazione(Lista l1);
+
