@@ -11,6 +11,8 @@ void stampaLista(Lista l);
 void insTesta(Lista *pl, Dato d);
 Lista* ricerca(Lista* pl, Dato d);
 void insOrd(Lista* l, Dato d);
+void insInMid(Lista *l, Dato d);
+void insCoda(Lista* lp, Dato d);
 void rimuoviTesta(Lista *l);
 int rim_elem(Lista* pl, Dato d);
 void nuovaLista(Lista *pl);

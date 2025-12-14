@@ -91,6 +91,37 @@ void nuovaLista(Lista *pl)
     *pl = NULL;
 }
 
+int len(Lista l)
+{
+    int n=0;
+    while(l)
+    {
+        n++;
+        l=l->next;
+    }
+    return n;
+}
+void insInMid(Lista *l, Dato d)
+{
+    int leng = len(*l);
+    for(int i=0; i<leng/2;i++)
+    {
+        l = &(*l)->next;
+    }
+    insTesta(l,d);
+    
+    
+}
+
+void insCoda(Lista* lp, Dato d)
+{
+    
+    while(*lp)
+        lp = &(*lp)->next;
+
+    insTesta(lp,d);
+
+}
 
 Lista insertionSort(Lista l1)
 {
