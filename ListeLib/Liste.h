@@ -15,6 +15,7 @@ void insInMid(Lista *l, Dato d);
 void insCoda(Lista* lp, Dato d);
 void rimuoviTesta(Lista *l);
 int rim_elem(Lista* pl, Dato d);
+void elim_tutti(Lista* pl, Dato d);
 void nuovaLista(Lista *pl);
 Lista insertionSort(Lista l1);
 Lista insertionSortConEliminazione(Lista l1);

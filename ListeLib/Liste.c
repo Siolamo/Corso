@@ -75,16 +75,22 @@ int rim_elem(Lista* pl, Dato d)
 
 }
 
-/*
+
 void elim_tutti(Lista* pl, Dato d)
 {
     while(*pl)
     {
+        printf("dato in lista= %d\ndato da eliminare= %d\n",(*pl)->dato,d);
         if((*pl)->dato==d)
-            pl =
+        {
+            rimuoviTesta(pl);
+            elim_tutti(pl, d);
+        }
+
+        pl = &(*pl)->next;
     }
 }
-*/
+
 void nuovaLista(Lista *pl)
 {
     *pl = NULL;
