@@ -24,6 +24,11 @@ int main(int argc, char *argv[])
    }
 
    stampaLista(l);
+   printf("\n------------------------------------\n");
+   printf("Stampa lista ordinata\n");
+   Lista l2;
+   ordina(l, &l2);
+   stampaLista(l2);
 
    if((fclose(f)!=0))
    {

@@ -57,17 +57,47 @@ void stampaLista(Lista l)
     }
     printf("]\n");
 }
-
-void insOrdPerNV(Lista *l,Dato d)
+//restituisce valore <0 se d1 precede di d2
+//viceversa
+int confronto(Dato d1,Dato d2)
 {
-    while(*l && (*l)->dato.numero_esami> d.numero_esami)
+    int r;
+    r = d1.numero_esami - d2.numero_esami;
+    if(r!=0)
     {
-        l = &(*l)->next;
+        return -r; //se la differeneza è negativa dobbiamo invertire di sengo cuz it means d2>d1
     }
-    insTesta(l, d);
+    else {
+        if((float)d1.somma_voti/d1.numero_esami<(float)d2.somma_voti/d2.numero_esami)
+        {
+            return 1;
+        }
+        else if((float)d1.somma_voti/d1.numero_esami>(float)d2.somma_voti/d2.numero_esami)
+        {
+            return -1;
+        }
+        else 
+        {
+            return 0;
+        }
+    }
 }
 
-void insSort(Lista l)
+void ins_ord(Lista *l1, Dato d)
 {
-    Lista l2;
+    while(*l1&&confronto((*l1)->dato, d)<0)
+    {
+        l1 = &(*l1)->next;
+    }
+    insTesta(l1, d);
+}
+
+void ordina(Lista l1, Lista *pl2)
+{
+    nuovaLista(pl2);
+    while(l1)
+    {
+        ins_ord(pl2, l1->dato);
+        l1 = l1->next;
+    }
 }

@@ -31,3 +31,4 @@ void StaData(Data d);
 void nuovaLista(Lista *l);
 void aggiorna(Lista *l,Record r);
 void stampaLista(Lista l);
+void ordina(Lista l1, Lista *pl2);
